@@ -315,8 +315,72 @@ h2 {
 }
 
 /* handling the responsiveness */
+/* medium screen size */
+
+@media screen and (max-width: 630px) {
+  nav {
+    width: 100%;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    position: relative;
+    z-index: 900;
+  }
+  .logo {
+    margin-top: 2rem;
+  }
+  .balance {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    gap: 2rem;
+    position: absolute;
+    top: 12rem;
+  }
+  .movements {
+    width: 100%;
+    position: absolute;
+    top: 16rem;
+    left: 1rem;
+  }
+  .summary {
+    position: relative;
+    top: 25rem;
+  }
+  .account-details {
+    position: absolute;
+    top: 20rem;
+  }
+  .operation--transfer,
+  .operation--loan,
+  .operation--close {
+    position: absolute;
+    left: 1px;
+  }
+
+  .operation--transfer {
+    top: 95rem;
+  }
+  .operation--loan {
+    top: 115rem;
+  }
+  .operation--close {
+    top: 135rem;
+  }
+  .logout-timer {
+    opacity: 0;
+  }
+  nav {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+  }
+}
+
 /* for smaller screen */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   nav {
     width: 100%;
     display: flex;
@@ -364,13 +428,13 @@ h2 {
     left: 1px;
   }
   .operation--transfer {
-    top: 75rem;
-  }
-  .operation--loan {
     top: 95rem;
   }
-  .operation--close {
+  .operation--loan {
     top: 115rem;
+  }
+  .operation--close {
+    top: 135rem;
   }
   .logout-timer {
     opacity: 0;
